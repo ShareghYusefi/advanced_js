@@ -12,6 +12,13 @@
         var password = form["password"].value;
         console.log(username, password);
 
+        // display username on the page
+        var result = document.getElementById("result");
+        result.innerHTML = "<p>Username: " + username + " </p>";
+        result.style.color = "blue";
+        result.style.backgroundColor = "yellow";
+        result.style.fontSize = "100px";
+
         // prevent the default form submission/page reload
         event.preventDefault();
       }
@@ -30,5 +37,7 @@
       <br />
       <button type="submit">Submit</button>
     </form>
+
+    <div id="result"></div>
   </body>
 </html>
