@@ -20,11 +20,23 @@
         console.log(username, password);
 
         // display username on the page
-        var result = document.getElementById("result");
+        // accessing DOM elements, getElementById, getElementByTagName, getElementByClassName
+        // var result = document.getElementById("result");
+        // var result = document.getElementsByTagName("div")[1];
+        var result = document.getElementsByClassName("card-body")[0];
+
+        // changed the html page, innerHTML property
         result.innerHTML = "<p>Username: " + username + " </p>";
+
+        // update css properties
         result.style.color = "blue";
         result.style.backgroundColor = "yellow";
         result.style.fontSize = "24px";
+
+        // set attributes to the element
+        // data attributes are custom attributes with custom value
+        // syntax is data-customName="customValue"
+        result.setAttribute("data-result", "result");
 
         // prevent the default form submission/page reload
         event.preventDefault();
