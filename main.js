@@ -19,6 +19,9 @@ $(document).ready(function () {
     // get username by id
     var username = $("#username").val();
 
+    // debugger breakpoint
+    debugger;
+
     result.html("<p>Username: " + username + " </p>");
 
     // updating css properties
