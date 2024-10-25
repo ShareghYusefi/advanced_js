@@ -19,8 +19,24 @@ $(document).ready(function () {
     // get username by id
     var username = $("#username").val();
 
+    // submit form data to API server using AJAX
+    $.ajax({
+      url: "http://localhost:3000/users",
+      type: "POST",
+      data: {
+        name: username,
+        age: 25,
+      },
+      success: function (response) {
+        console.log("Success: ", response);
+      },
+      failure: function (response) {
+        console.log("Failure: ", response);
+      },
+    });
+
     // debugger breakpoint
-    debugger;
+    // debugger;
 
     result.html("<p>Username: " + username + " </p>");
 
